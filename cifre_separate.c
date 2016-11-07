@@ -3,10 +3,9 @@
 int main() 
 {
   int num;
-  
-
+   
   printf("Inserisci un numero di cinque cifre: ");
-  scanf("%d", &num);
+   scanf("%d", &num);
 
   if (num > 9999 && num < 99999) {
     printf("%d\n", num);
