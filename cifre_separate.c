@@ -3,14 +3,17 @@
 int main() 
 {
   int num;
-   
+  int est; 
   printf("Inserisci un numero di cinque cifre: ");
    scanf("%d", &num);
 
-  if (num > 9999 && num < 99999) {
-    printf("%d\n", num);
-   }
-  else
-  printf("Errore\n");
-
+  if (num<10000 || num>99999) 
+    {
+    printf("Errore\n");
+     }
+  else { 
+     printf("Il numero e':%d\n",num);
+     est=num%10;
+     printf("L'ultima cifra e':%d\n",est);
+       } 
   return 0;}
