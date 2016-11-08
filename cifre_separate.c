@@ -3,22 +3,22 @@
 int main() 
 {
   int num;
-  int est;  /* che significa est? trova un nome migliore */
+  int cifra;
+  int i;
 
   printf("Inserisci un numero di cinque cifre: ");
   scanf("%d", &num);
 
-  /* caso negativo, se il numero non va bene esci dal programma */
   if (num < 10000 || num > 99999) {
     return -1;
   }
 
-  /* else non necessario, se siamo qui significa che num
-   * e' proprio di cinque cifre
-   */
-  printf("Il numero e':%d\n",num);
-  est=num%10;
-  printf("L'ultima cifra e':%d\n",est);
+  for(i = 10000; i > 0; i/=10){
+    cifra= (num / i) %10;
+    printf("%d   ",cifra);
+  }
+
+  printf("\n");
 
   return 0;
 }
