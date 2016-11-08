@@ -4,7 +4,7 @@ int main()
 {
   int num;
   int cifra;
-  int i;
+  
 
   printf("Inserisci un numero di cinque cifre: ");
   scanf("%d", &num);
@@ -13,10 +13,16 @@ int main()
     return -1;
   }
 
-  for(i = 10000; i > 0; i/=10){
-    cifra= (num / i) %10;
+    cifra= (num / 10000) %10;
     printf("%d   ",cifra);
-  }
+    cifra= (num / 1000) %10;
+    printf("%d   ",cifra);
+    cifra= (num / 100) %10;
+    printf("%d   ",cifra);
+    cifra= (num / 10) %10;
+    printf("%d   ",cifra);
+     cifra= num % 10;
+    printf("%d   ",cifra);
 
   printf("\n");
 
